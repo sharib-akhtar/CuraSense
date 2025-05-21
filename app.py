@@ -15,11 +15,12 @@ model = None
 device = None
 hf_token = os.getenv("HF_TOKEN")
 model_name = "Ugly12021/emotion-model"
-tokenizer = AutoTokenizer.from_pretrained(model_name, use_auth_token=hf_token)
-model = AutoModelForSequenceClassification.from_pretrained(model_name, use_auth_token=hf_token)
+tokenizer = AutoTokenizer.from_pretrained(model_name, token=hf_token)
+model = AutoModelForSequenceClassification.from_pretrained(model_name, token=hf_token)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 model.to(device)
 model.eval()
+print("model loaded!!!")
 
 app = Flask(__name__)
 CORS(app)
