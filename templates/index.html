@@ -1,0 +1,165 @@
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mental Health Recommender</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+
+</head>
+<body>
+  <div class="container" style="background-color: white;">
+    <h1>Mental Health Recommender</h1>
+
+     User Details
+    <div id="userGreeting" class="greeting"></div>
+
+
+
+    <div id="step1" class="step">
+      <h2>How are you feeling today?</h2>
+      <textarea id="emotionText" rows="4" placeholder="Type your thoughts..."></textarea><br />
+      <button onclick="submitEmotion()">Submit</button>
+    </div>
+
+
+    <div id="step2" class="step hidden">
+      <h2>What are you looking for?</h2>
+      <form id="intentForm">
+        <label><input type="radio" name="intent" value="comfort" required> Comfort</label><br/>
+        <label><input type="radio" name="intent" value="motivation"> Motivation</label><br/>
+        <label><input type="radio" name="intent" value="distraction"> Distraction</label><br/>
+        <button type="submit">Next</button>
+      </form>
+    </div>
+
+
+    <div id="step3" class="step hidden">
+      <h2>What interests you right now?</h2>
+      <form id="interestForm">
+        <label><input type="checkbox" name="interest" value="music"> Music</label><br/>
+        <label><input type="checkbox" name="interest" value="articles"> Articles</label><br/>
+        <label><input type="checkbox" name="interest" value="videos"> Videos</label><br/>
+        <label><input type="checkbox" name="interest" value="quotes"> Quotes</label><br/>
+        <button type="submit">Get Recommendations</button>
+      </form>
+    </div>
+
+
+    <div id="step4" class="step hidden">
+      <h2>Your Personalized Recommendations</h2>
+      <div id="recommendationResults"></div>
+    </div>
+  </div>
+
+<div id="emergencyModal" class="modal hidden">
+  <div class="modal-content">
+    <span class="close-button" onclick="closeEmergencyModal()">&times;</span>
+    <h2>🚨 Seek Help Immediately</h2>
+    <p>You appear to be in emotional distress. Please contact a professional right away.</p>
+    <ul>
+      <li><a href="https://www.vandrevalafoundation.com/helpline" target="_blank">📞 Vandrevala Foundation (India)</a></li>
+      <li><a href="https://988lifeline.org/" target="_blank">📞 988 Suicide & Crisis Lifeline (USA)</a></li>
+      <li><a href="https://www.samaritans.org/how-we-can-help/contact-samaritan/" target="_blank">📞 Samaritans (UK)</a></li>
+    </ul>
+  </div>
+</div>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  <script>
+    const name = localStorage.getItem('userName');
+    const age = localStorage.getItem('userAge');
+    const email = localStorage.getItem('userEmail');
+
+    const greetingDiv = document.getElementById('userGreeting');
+    if (name && age && email) {
+      greetingDiv.innerHTML = `<b style="font-size:50px">Welcome</b><br>${name}`;
+    }
+  </script>
+
+</body>
+</html>
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mental Health Recommender</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+
+</head>
+<body>
+  <div class="container" style="background-color: white;">
+    <h1>Mental Health Recommender</h1>
+
+    <!-- User Details -->
+    <div id="userGreeting" class="greeting"></div>
+
+
+    <!-- Step 1: Emotion Input -->
+    <div id="step1" class="step">
+      <h2>How are you feeling today?</h2>
+      <textarea id="emotionText" rows="4" placeholder="Type your thoughts..."></textarea><br />
+      <button onclick="submitEmotion()">Submit</button>
+    </div>
+
+    <!-- Step 2: Intent Form -->
+    <div id="step2" class="step hidden">
+      <h2>What are you looking for?</h2>
+      <form id="intentForm">
+        <label><input type="radio" name="intent" value="comfort" required> Comfort</label><br/>
+        <label><input type="radio" name="intent" value="motivation"> Motivation</label><br/>
+        <label><input type="radio" name="intent" value="distraction"> Distraction</label><br/>
+        <button type="submit">Next</button>
+      </form>
+    </div>
+
+    <!-- Step 3: Interests Form -->
+    <div id="step3" class="step hidden">
+      <h2>What interests you right now?</h2>
+      <form id="interestForm">
+        <label><input type="checkbox" name="interest" value="music"> Music</label><br/>
+        <label><input type="checkbox" name="interest" value="articles"> Articles</label><br/>
+        <label><input type="checkbox" name="interest" value="videos"> Videos</label><br/>
+        <label><input type="checkbox" name="interest" value="quotes"> Quotes</label><br/>
+        <button type="submit">Get Recommendations</button>
+      </form>
+    </div>
+
+    <!-- Step 4: Recommendations -->
+    <!-- Step 4: Recommendations -->
+<div id="step4" class="step hidden">
+  <h2>Your Personalized Recommendations</h2>
+  <div id="recommendationResults" class="recommendation-list"></div>
+</div>
+
+<!-- Emergency Modal -->
+<div id="emergencyModal" class="modal hidden">
+  <div class="modal-content">
+    <span class="close-button" onclick="closeEmergencyModal()">&times;</span>
+    <h2>🚨 Seek Help Immediately</h2>
+    <p>You appear to be in emotional distress. Please contact a professional right away.</p>
+    <ul>
+      <li><a href="https://www.vandrevalafoundation.com/helpline" target="_blank">📞 Vandrevala Foundation (India)</a></li>
+      <li><a href="https://988lifeline.org/" target="_blank">📞 988 Suicide & Crisis Lifeline (USA)</a></li>
+      <li><a href="https://www.samaritans.org/how-we-can-help/contact-samaritan/" target="_blank">📞 Samaritans (UK)</a></li>
+    </ul>
+  </div>
+</div>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  <script>
+    const name = localStorage.getItem('userName');
+    const age = localStorage.getItem('userAge');
+    const email = localStorage.getItem('userEmail');
+
+    const greetingDiv = document.getElementById('userGreeting');
+    if (name && age && email) {
+      greetingDiv.innerHTML = `<b style="font-size:50px">Welcome</b><br>${name}`;
+    }
+  </script>
+
+</body>
+</html>
+

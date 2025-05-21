@@ -1,0 +1,309 @@
+/* Apply a full-page background image */
+/*
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('../images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.container {
+  /* background-color: rgba(255, 255, 255, 0.85);  */
+  /* background-color: #cca845; */
+  /* opacity: 0.5px;
+  color: brown;
+  max-width: 800px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+#signForm{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-size-adjust: 100px;
+}
+
+
+.step {
+  margin-bottom: 30px;
+}
+
+/* Hidden class */
+/* .hidden {
+  display: none;
+}
+
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+} */
+
+
+/* body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eef2f7;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  }
+
+  h1, h2 {
+    text-align: center;
+    color: #333;
+  }
+
+  textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    resize: vertical;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+
+  button {
+    background-color:#7ebd31;
+    color: black;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+
+   .hidden {
+    display: none;
+  }
+  #greeting {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .greeting {
+    text-align: center;
+    /* font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: 'Times New Roman', Times, serif;
+  }*/
+  .modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 999;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 30px;
+  border: 2px solid red;
+  width: 80%;
+  max-width: 500px;
+  text-align: center;
+  border-radius: 10px;
+  animation: fadeIn 0.3s ease;
+}
+
+.close-button {
+  color: red;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  color: darkred;
+}
+
+.modal-content h2 {
+  color: red;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+/* Apply a full-page background image */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url("/static/img/background_img.jpg");
+ /* adjust if your image is elsewhere */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Optional: Semi-transparent background for better readability */
+.container {
+  /* background-color: rgba(255, 255, 255, 0.83);  */
+  /* background-color: #cca845; */
+  /* opacity: 0.5px;
+  color: brown; */
+  max-width: 800px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Step styles */
+.step {
+  margin-bottom: 30px;
+}
+
+/* Hidden class */
+/* .hidden {
+  display: none;
+}
+
+/* Button styling */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+} */
+
+
+/* body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eef2f7;
+    margin: 0;
+    padding: 0;
+  } */
+
+  .container {
+    max-width: 600px;
+    /* margin: 40px auto; */
+    background-color: white;
+    /* padding: 30px; */
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  }
+
+  h1, h2 {
+    text-align: center;
+    color: #333;
+  }
+
+  textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    resize: vertical;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+
+  button {
+    background-color:#7ebd31;
+    color: black;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+
+   .hidden {
+    display: none;
+  }
+  #greeting {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .greeting {
+    text-align: center;
+    /* font-weight: bold; */
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: 'Times New Roman', Times, serif;
+  }
+.recommendation-list {
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+.recommendation-item {
+  margin-bottom: 12px;
+  padding: 10px;
+  border-left: 4px solid #4CAF50;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.recommendation-item a {
+  text-decoration: none;
+  color: #0077cc;
+  font-weight: 500;
+}
+
+.recommendation-item a:hover {
+  text-decoration: underline;
+}
+
+
+  /* .step {
+    margin-top: 30px;
+  }  */
+
+  /* .step {
+    margin-top: 30px;
+  }  */
